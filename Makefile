@@ -6,16 +6,11 @@ all: completions generate
 .PHONY: completions
 completions: \
 	completions/chezmoi-completion.bash \
-	completions/chezmoi.fish \
 	completions/chezmoi.zsh
 
 .PHONY: completions/chezmoi-completion.bash
 completions/chezmoi-completion.bash:
 	mkdir -p $$(dirname $@) && go run . completion bash > $@ || ( rm -f $@ ; false )
-
-.PHONY: completions/chezmoi.fish
-completions/chezmoi.fish:
-	mkdir -p $$(dirname $@) && go run . completion fish > $@ || ( rm -f $@ ; false )
 
 .PHONY: completions/chezmoi.zsh
 completions/chezmoi.zsh:

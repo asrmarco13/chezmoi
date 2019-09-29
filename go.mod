@@ -44,8 +44,5 @@ require (
 	gopkg.in/yaml.v2 v2.2.2
 )
 
-// Temporary while waiting for https://github.com/spf13/cobra/pull/754 to be merged
-replace github.com/spf13/cobra => github.com/0robustus1/cobra v0.0.4-0.20190522074606-64400adf086c
-
 // Temporary while waiting for https://github.com/hectane/go-acl/pull/14 to be merged
 replace github.com/hectane/go-acl => github.com/twpayne/go-acl v0.0.2
